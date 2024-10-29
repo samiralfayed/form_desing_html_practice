@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Country" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="password" placeholder="Password" required>
+            <label>
+                <input type="checkbox" required> I accept terms & conditions
+            </label>
+            <button type="submit">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Registration successful!');
+            window.location.href = 'signin.html';
+        }
+    </script>
+</body>
+</html>
